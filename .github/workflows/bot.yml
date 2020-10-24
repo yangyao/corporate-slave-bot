@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,3 +26,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn
     - run: node index.js
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GROUP_ID: ${{ secrets.GROUP_ID }}
