@@ -1,5 +1,5 @@
 
-name: Schedule telegram bot
+name: Schedule telegram bot MorningLabor
 
 on:
   push:
