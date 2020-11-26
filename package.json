@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
     "telegraf": "^3.38.0"
   },
   "devDependencies": {
@@ -22,4 +23,3 @@
     "npm": "^6.14.8"
   }
 }
-

@@ -1,4 +1,5 @@
 (async () => {
+  const _ = require('lodash');
   const dotenv = require('dotenv');
   dotenv.config();
   const { Telegram } = require('telegraf');
@@ -50,6 +51,6 @@
     '大鱼大肉山珍海味是留给有钱人的。早安，打工人！',
   ];
 
-  const messge = messges[Math.floor(Math.random() * messges.length)];
+  const messge = messges[_.random(0, messges.length - 1)];
   await tg.sendMessage(process.env.GROUP_ID, messge);
 })();
