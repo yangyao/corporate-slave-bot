@@ -52,5 +52,8 @@
   ];
 
   const messge = messges[_.random(0, messges.length - 1)];
-  await tg.sendMessage(process.env.GROUP_ID, messge);
+  const groupIds = _.split(process.env.GROUP_ID, ',');
+  for (const groupId of groupIds) {
+      await tg.sendMessage(groupId, messge);
+  }
 })();
